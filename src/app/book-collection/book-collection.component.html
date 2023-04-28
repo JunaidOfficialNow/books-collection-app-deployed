@@ -1,0 +1,15 @@
+<div
+  class="book-item  flex justify-between border-2 w-[80%] mt-3  bg-slate-950 py-2"
+  *ngFor="let book of books; let i = index"
+>
+<div class="ms-3">
+  <p><span>{{ i + 1}}</span>. {{book.volumeInfo.title}}</p><span class="ms-5">  by {{book.volumeInfo.authors}}</span>
+</div>
+ 
+  <br>
+  <button
+  class="text-blue-400 me-3 hover:text-white"
+    (click)="remove.emit(book.id)"
+    data-test="add-button"
+  >Remove</button>
+</div>

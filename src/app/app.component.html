@@ -1,0 +1,14 @@
+
+  <section class="h-[100vh] w-[50%] float-left flex mt-12 items-center flex-col">
+    <h2 class="font-mono text-2xl mb-5 underline">Books</h2>
+    <app-book-list class="book-list w-[100%] flex justify-center flex-col items-center" [books]="(books$ | async)!" (add)="onAdd($event)"></app-book-list>
+    
+  </section>
+  
+  <section class="h-[100vh] w-[50%] float-left flex mt-12 items-center flex-col">
+    <h2 class="font-mono text-2xl mb-5 underline">My Collection</h2>
+    <app-book-collection class="book-collection w-[100%] flex justify-center flex-col items-center" [books]="(bookCollection$ | async)!" (remove)="onRemove($event)">
+    </app-book-collection>
+  </section>
+
+
